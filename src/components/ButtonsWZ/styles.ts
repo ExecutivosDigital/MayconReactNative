@@ -26,10 +26,6 @@ export const Title = styled.Text`
     font-family: ${theme.FONT_FAMILY.BOLD};
     `};
 `;
-export const Whats = styled.Image`
-    
-    width: 70px;
-    height: 70px;
-`;
+
 
 

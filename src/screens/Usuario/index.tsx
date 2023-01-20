@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Form, FormWZ } from "./styles"
 import { Header1 } from '../../components/Header';
+import {Buttons} from '../../components/Buttons';
 import { ButtonsSM } from "../../components/ButtonsSM";
 import { ButtonsLG } from "../../components/ButtonsLG";
 import { ButtonsMD } from "../../components/ButtonsMD";
@@ -22,7 +23,8 @@ export function Usuarios(){
             <ModalExample/>
 
 
-            <ButtonsSM 
+            <Buttons 
+                typeButton = 'ButtonsSM'
                 title = 'Localizações Favoritas'
             />
 
