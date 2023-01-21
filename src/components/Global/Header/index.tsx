@@ -1,7 +1,7 @@
 import { Container, Logo, Foto, Title, Form } from "./styles";
 
-import LogoImg from '../../assets/logo.png'
-import FotoImg from '../../assets/foto.png'
+import LogoImg from '../../../assets/logo.png'
+import FotoImg from '../../../assets/foto.png'
 
 type Props = {
     title: string;

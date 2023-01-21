@@ -1,13 +1,9 @@
 import React from 'react';
 import { Container, Form, FormWZ } from "./styles"
-import { Header1 } from '../../components/Header';
-import {Buttons} from '../../components/Buttons';
-import { ButtonsSM } from "../../components/ButtonsSM";
-import { ButtonsLG } from "../../components/ButtonsLG";
-import { ButtonsMD } from "../../components/ButtonsMD";
-import { ButtonsWZ } from "../../components/ButtonsWZ"
+import { Header1 } from '../../components/Global/Header';
+import {Buttons} from '../../components/Global/Buttons';
 import { Linking, Alert } from 'react-native';
-import {ModalExample } from '../../components/Modal'
+import {ModalExample } from '../../components/screens/Modal'
 
 
 
@@ -24,33 +20,40 @@ export function Usuarios(){
 
 
             <Buttons 
-                typeButton = 'ButtonsSM'
+                
+                typeButton = 'ButtonSM'
                 title = 'Localizações Favoritas'
             />
 
 
-            <ButtonsLG
+            <Buttons
+                typeButton = 'ButtonLG'
                 title="PREMIUM"
             />
 
 
             <Form>
-                <ButtonsMD 
+                <Buttons
+                
+                    typeButton = 'ButtonMD' 
                     title = 'Youtube'
                     onPress={() => Linking.openURL('https://www.youtube.com/watch?v=dQw4w9WgXcQ')}
                 />
-                <ButtonsMD 
+                <Buttons
+                    typeButton = 'ButtonMD' 
                     title = 'Instagram' 
                     onPress={() => Linking.openURL('https://instagram.com/executivosdigital?igshid=YmMyMTA2M2Y=')}
                  />  
             </Form>                      
             
 
-            <ButtonsSM 
+            <Buttons
+                typeButton = 'ButtonM' 
                 title = 'Tutorial, Políticas, Termos e FAQ'
                 onPress={() => Linking.openURL('https://about.google/intl/ALL_br/supplier-code-of-conduct/#:~:text=O%20Google%20tem%20o%20compromisso,com%20ética%20e%20responsabilidade%20ambiental.')}
             />
-            <ButtonsSM 
+            <Buttons
+                typeButton = 'ButtonSM' 
                 title = 'Sair'
                 onPress={() => 
                     Alert.alert(
@@ -64,9 +67,11 @@ export function Usuarios(){
                   }        
             />
 
-            <ButtonsSM 
+            <Buttons
+                type = 'SECUNDARY'
+                typeButton = 'ButtonSM' 
                 title = 'Deseja Excluir sua Conta?'
-                type= 'SECUNDARY'
+
                 onPress={() => 
                     Alert.alert(
                       'Excluir',
@@ -78,10 +83,10 @@ export function Usuarios(){
                     )
                   } 
             />
-
             <FormWZ>
-            <ButtonsWZ 
-                title = '       Alguma duvida?     Fale com nosso Suporte'
+            <Buttons
+                typeButton = 'ButtonWZ' 
+                title = '      Alguma duvida?     Fale com nosso Suporte'
                 onPress={() => Linking.openURL('https://wa.me/<66999065603>')}
             />            
             </FormWZ>
