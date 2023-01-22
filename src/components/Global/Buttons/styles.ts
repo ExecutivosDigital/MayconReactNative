@@ -1,5 +1,8 @@
 import { TouchableOpacity } from 'react-native';
 import styled,{ css } from 'styled-components/native';
+import Image1 from '../../../assets/premium.png';
+import { MaterialIcons} from '@expo/vector-icons';
+
 
 export type ButtonTypeStyleProps = 'PRIMARY' | 'SECUNDARY';
 export type ButtonTypeSizeProps = 'LARGE' | 'MEDIUM' | 'SMALL';
@@ -33,7 +36,7 @@ export const TitleBlack = styled.Text`
     export const ButtonSM = styled(TouchableOpacity)<Props>`
         
         width: 100%;
-        height: 30px;
+        height: 35px;
         background-color: ${({ theme,type }) => type === 'PRIMARY' ? theme.COLORS.PURPLE_100: theme.COLORS.PURPLE_200};
         border-radius: 6px;
 
@@ -47,35 +50,33 @@ export const TitleBlack = styled.Text`
 
     export const ButtonMD = styled(TouchableOpacity) `
         width: 48%;
-        height: 105px;
-
-        background-color: ${({ theme }) => theme.COLORS.PURPLE_100};
+        height: 130px;
+        
         border-radius: 6px;
         border-right: 10px;
 
         flex-direction: row;
         align-items: center;
 
-        padding: 4px;
+        
         margin-bottom: 12px;
 `;
     export const ButtonLG = styled(TouchableOpacity).attrs({
         onPress: (props: any) => props.onPress })`
         width: 100%;
-        height: 105px;
+        height: 130px;
         color: 'black';
         border-radius: 6px;
-        background-color: ${({ theme }) => theme.COLORS.PURPLE_100};
         flex-direction: row;
         align-items: center;
 
-        padding: 4px;
+        
         margin-bottom: 12px;
 `;
 
     export const ButtonWZ = styled(TouchableOpacity) `
-    width: 50%;
-    height: 80px;
+    width: 65%;
+    height: 60px;
 
     background-color: ${({ theme }) => theme.COLORS.GREEN_100};
     border-radius: 6px;
@@ -88,6 +89,18 @@ export const TitleBlack = styled.Text`
     padding: 4px;
     margin-bottom: 12px;
 `;
-
-
+export const LogoSmall = styled.Image`
+    width: 20%;
+    height: 50px;
+`;
+export const LogoLarge = styled.Image`
+    border-radius: 6px;
+    width: 100%;
+    height: 100%;
+`;
+export const LogoMedium = styled.Image`
+    border-radius: 6px;
+    width: 100%;
+    height: 100%;
+`;
 

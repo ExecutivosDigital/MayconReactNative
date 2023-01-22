@@ -21,11 +21,10 @@ export const Form = styled.View`
 
 
 
-
 export const FormWZ = styled.View`
     
     background-color: ${({ theme }) => theme.COLORS.PURPLE_300};
-    margin-top: 50px;
+    margin-top: 30px;
     align-items:center;
  
 `;
