@@ -4,6 +4,7 @@ import { Header1 } from '../../components/Global/Header';
 import {Buttons} from '../../components/Global/Buttons';
 import { Linking, Alert } from 'react-native';
 import {ModalExample } from '../../components/screens/Modal'
+import {ModalButton } from '../../components/screens/Modal/styles'
 import Premium from '../../assets/premium.png'
 import Instagram from '../../assets/instagram.png'
 import Youtube from '../../assets/youtube.png'
@@ -22,17 +23,17 @@ export function Usuarios(){
             <ModalExample/>
 
 
-            <Buttons 
+            <Buttons             
                 logo = ''
                 typeButton = 'ButtonSM'
                 title = 'Localizações Favoritas'
+
             />
-
-
+                
             <Buttons
                 logo = {Premium} 
                 typeButton = 'ButtonLG'
-                title="PREMIUM"
+                title= ""
             />
 
 

@@ -1,13 +1,16 @@
 import React, { useState } from 'react';
-import { View, Text, Modal, TouchableOpacity } from 'react-native';
+import { View, Text, TouchableOpacity } from 'react-native';
+import Modal from "react-native-modal";
 import { Container, ModalButton, ModalCloseText ,ModalContainer,ModalCloseButton} from './styles'
 
 
 export const ModalExample = () => {
   const [modalVisible, setModalVisible] = useState(false);
 
+  
+
   return (
-    <Container >
+    <Container  >
       <ModalButton 
         onPress={() => setModalVisible(true)}
       >
@@ -17,12 +20,12 @@ export const ModalExample = () => {
 
       </ModalButton>
       <Modal
-        animationType="slide"
-        transparent={false}
-        visible={modalVisible}
-        onRequestClose={() => {
-          setModalVisible(false);
-        }}
+        animationIn = "slideInUp"
+        animationOut = "slideOutDown"
+        isVisible={modalVisible}
+        onBackButtonPress={() => setModalVisible(false)}
+        onBackdropPress={() => setModalVisible(false)}
+
       >
         <ModalContainer>
         <Text 
@@ -37,6 +40,7 @@ export const ModalExample = () => {
         
 
   <ModalCloseButton
+    
     onPress={() => {
       setModalVisible(false);
     }}
@@ -51,5 +55,5 @@ export const ModalExample = () => {
       </Modal>
     </Container>
   );
-};
+    };
 
